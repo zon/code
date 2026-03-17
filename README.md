@@ -1,12 +1,5 @@
 # Coding Standards
 
-## Shallow Functions
-
-Functions should be simple and avoid deeply nested logic.
-
-- Each function should have a single, clear responsibility
-- Extract nested branches into well-named helper functions
-
 ## Deep Modules
 
 Modules and classes should hide complexity behind simple interfaces. A deep module has a lot of functionality but a narrow, easy-to-use surface area.
