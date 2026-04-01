@@ -1,4 +1,4 @@
-# Module Sizing
+# Deep Modules
 
 A deep module is a software component that provides powerful, complex functionality while exposing a simple, narrow public interface. Is the code effectively broken down into deep modules?
 
