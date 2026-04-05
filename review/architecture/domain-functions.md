@@ -15,15 +15,19 @@ func postMessage(ctx):
 
 This function contains no implementation detail — it calls lower-level functions to directly express domain requirements. HTTP handlers, command handlers, core logic loops, and event handlers should follow the same pattern.
 
-## domain-functions.yaml
+## Review
 
-Where domain functions are found in a repo, create a `domain-functions.yaml` file in the repo root that lists them:
+1. Create a `domain-functions.yaml` file in the repo root that lists all domain functions:
 
-```yaml
-- file: handlers/users_handler.go
-  functions:
-  - getUser
-  - postUser
-```
+   ```yaml
+   - file: handlers/users_handler.go
+     functions:
+     - getUser
+     - postUser
+   ```
 
-Each entry names the file and the domain functions within it. Only functions listed here are considered domain functions.
+   Each entry names the file and the domain functions within it. Only functions listed here are considered domain functions.
+
+2. For each listed function, consider whether it is correct: does it contain no implementation details and have simple flow control?
+
+3. Consider what the domain features of the app are and whether they are covered by clearly organized domain functions.
