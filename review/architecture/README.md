@@ -3,7 +3,7 @@
 ## Contents
 
 * [Deep Modules](deep-modules.md)
-* [Domain Logic](domain-logic.md)
+* [Domain Functions](domain-functions.md)
 
 
 ## Ralph Review Configuration
@@ -14,5 +14,5 @@ To configure `ralph review` with every architecture section as a review item, ad
 review:
   items:
     - url: https://raw.githubusercontent.com/zon/code/main/review/architecture/deep-modules.md
-    - url: https://raw.githubusercontent.com/zon/code/main/review/architecture/domain-logic.md
+    - url: https://raw.githubusercontent.com/zon/code/main/review/architecture/domain-functions.md
 ```
