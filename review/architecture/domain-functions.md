@@ -13,11 +13,11 @@ func postMessage(ctx):
   publishEvent(channel, message)
 ```
 
-This function contains no implementation detail — it calls lower-level functions to directly express domain requirements. HTTP handlers, command handlers, core logic loops, and event handlers should follow the same pattern.
+This function contains no implementation detail — it calls lower-level functions to directly express domain requirements.
 
 ## Review
 
-1. Read `domain-functions.yaml` in the repo root. It lists all domain functions grouped by feature:
+1. Read `domain-functions.yaml` in the repo root. It lists all domain functions grouped by feature — HTTP handlers, command handlers, core logic loops, and event handlers:
 
    ```yaml
    - feature: user management
@@ -27,8 +27,6 @@ This function contains no implementation detail — it calls lower-level functio
      - file: handlers/users_handler.go
        name: postUser
    ```
-
-   Features are where domain logic starts — HTTP handlers, command handlers, core logic loops, and event handlers.
 
 2. For each listed function, read the implementation and verify:
    - **Shallow flow control:** the function may have simple top-level conditions but avoids deep nesting — complex branching is delegated to lower-level functions
