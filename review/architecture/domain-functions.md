@@ -21,11 +21,11 @@ This function contains no implementation detail — it calls lower-level functio
 
    ```yaml
    - feature: user management
-     files:
+     functions:
      - file: handlers/users_handler.go
-       functions:
-       - getUser
-       - postUser
+       name: getUser
+     - file: handlers/users_handler.go
+       name: postUser
    ```
 
    Features are where domain logic starts — HTTP handlers, command handlers, core logic loops, and event handlers.
