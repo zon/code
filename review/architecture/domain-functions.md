@@ -27,10 +27,10 @@ func postMessage(ctx):
    ```
 
 2. For each listed function, read the implementation and verify:
-   - **It really is a domain function** the function's purpose really is a domain concern
+   - **It really is a domain function:** the function's purpose really is a domain concern
    - **Shallow flow control:** the function's flow control logic isn't too deep
-   - **No implementation details:** if the function contains implimentation logic that should be extracted
+   - **No implementation details:** if the function contains implementation logic that should be extracted
 
 3. Consider what the domain features of the app are and whether they are covered by clearly organized domain functions.
 
-When problems discovered plan specific solutions. Plan a new architecture that better meets our standards.
+When problems are discovered, plan specific solutions. Plan a new architecture that better meets our standards.
