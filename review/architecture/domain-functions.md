@@ -17,14 +17,18 @@ This function contains no implementation detail — it calls lower-level functio
 
 ## Review
 
-1. Read `domain-functions.yaml` in the repo root. It lists all domain functions:
+1. Read `domain-functions.yaml` in the repo root. It lists all domain functions grouped by feature:
 
    ```yaml
-   - file: handlers/users_handler.go
-     functions:
-     - getUser
-     - postUser
+   - feature: user management
+     files:
+     - file: handlers/users_handler.go
+       functions:
+       - getUser
+       - postUser
    ```
+
+   Features are where domain logic starts — HTTP handlers, command handlers, core logic loops, and event handlers.
 
 2. For each listed function, read the implementation and verify:
    - **Shallow flow control:** the function may have simple top-level conditions but avoids deep nesting — complex branching is delegated to lower-level functions
