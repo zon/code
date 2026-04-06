@@ -1,6 +1,6 @@
 # Domain Functions
 
-Domain functions encode the real-world rules and processes the software solves — not the technical infrastructure needed to run it. They should contain no implementation details and have simple flow control.
+Domain functions encode the real-world rules and processes the software solves — not the technical infrastructure needed to run it. They should contain no implementation details and have simple flow control. Readability is the highest priority for a domain function.
 
 For example, a messaging app HTTP handler:
 
@@ -12,8 +12,6 @@ func postMessage(ctx):
   upsertMessage(user, channel, message)
   publishEvent(channel, message)
 ```
-
-This function contains no implementation detail — it calls lower-level functions to directly express domain requirements.
 
 ## Review
 
@@ -29,8 +27,10 @@ This function contains no implementation detail — it calls lower-level functio
    ```
 
 2. For each listed function, read the implementation and verify:
-   - **Shallow flow control:** the function may have simple top-level conditions but avoids deep nesting — complex branching is delegated to lower-level functions
-   - **No implementation details:** it contains no parsing, querying, formatting, error handling boilerplate, or other infrastructure concerns
-   - **Misplaced logic:** when implementation details are present, consider where they belong — parsing into request helpers, queries into repository functions, formatting into response helpers, complex branching into lower-level named functions
+   - **It really is a domain function** the function's purpose really is a domain concern
+   - **Shallow flow control:** the function's flow control logic isn't too deep
+   - **No implementation details:** if the function contains implimentation logic that should be extracted
 
 3. Consider what the domain features of the app are and whether they are covered by clearly organized domain functions.
+
+When problems discovered plan specific solutions. Plan a new architecture that better meets our standards.
