@@ -31,5 +31,6 @@ This function contains no implementation detail — it calls lower-level functio
 2. For each listed function, read the implementation and verify:
    - **Shallow flow control:** the function may have simple top-level conditions but avoids deep nesting — complex branching is delegated to lower-level functions
    - **No implementation details:** it contains no parsing, querying, formatting, error handling boilerplate, or other infrastructure concerns
+   - **Misplaced logic:** when implementation details are present, consider where they belong — parsing into request helpers, queries into repository functions, formatting into response helpers, complex branching into lower-level named functions
 
 3. Consider what the domain features of the app are and whether they are covered by clearly organized domain functions.
