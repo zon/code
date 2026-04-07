@@ -46,4 +46,4 @@ A major feature with unique shallow behavior should be covered by only one domai
 
 ## Planning Improvements
 
-When problems are discovered, plan specific solutions. Plan a new architecture that better meets our standards. Projects that alter domain functions should require matching updates to `domain-functions.yaml`.
+When problems are discovered, plan specific solutions. Plan a new architecture that better meets our standards. Projects that alter domain functions should require matching updates to `domain-functions.yaml`. Major features should not share the same project requirement.
